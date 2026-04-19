@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- Preload fonts -->
+    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Lato-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Lato-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Trynexis</title>
+</head>
+
+<style>
+    :root {
+        --color-brand-primary: #3e9cdc;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">LOREMIPSUM.<span class="header__logo-accent">NET</span></a>
+            <nav class="header__nav visible-from-lg">
+                <a href="#" class="header__nav-link header__nav-link--active">Бизнес</a>
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Цены</a>
+                <a href="#" class="header__nav-link">Оформить заказ</a>
+            </nav>
+            <button class="header__burger hidden-from-lg">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-accent">Lorem ipsum</span> dolor sit ametconsectetur
+                        <span class="hero__title-accent"> adipiscing</span>
+                    </h1>
+                    <div>
+                        <p class="hero__lead">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+                        <ul class="hero__list">
+                            <li class="hero__list-item">Totam rem aperiam eaque ipsa</li>
+                            <li class="hero__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+                            <li class="hero__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                        </ul>
+                    </div>
+
+                    <div class="hero__buttons">
+                        <button class="btn btn--primary btn--md">Заказать</button>
+                        <button class="btn btn--outline btn--md">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="order__inner">
+                <h2 class="order__title">Оформление <span class="order__title-accent">Заказа</span></h2>
+                <p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+                <div class="steps">
+                    <div class="steps__item">
+                        <div class="steps__icon">
+                            <img src="./assets/order/search.avif" />
+                        </div>
+                        <p class="steps__label">Lorem ipsum dolor sit amet</p>
+                        <div class="steps__connector">
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                        </div>
+                    </div>
+
+                    <div class="steps__item">
+                        <div class="steps__icon">
+                            <img src="./assets/order/percent.avif" />
+                        </div>
+                        <p class="steps__label">Consectetur adipiscing elit</p>
+                        <div class="steps__connector">
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                        </div>
+                    </div>
+
+                    <div class="steps__item">
+                        <div class="steps__icon">
+                            <img src="./assets/order/file.avif" />
+                        </div>
+                        <p class="steps__label">Sed do eiusmod tempor</p>
+                        <div class="steps__connector">
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                        </div>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__icon">
+                            <img src="./assets/order/message.avif" />
+                        </div>
+                        <p class="steps__label">Esse cillum dolore eu fugiat</p>
+                        <div class="steps__connector">
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                            <span class="steps__connector-dot"></span>
+                        </div>
+                    </div>
+
+                    <div class="steps__item">
+                        <div class="steps__icon">
+                            <img src="./assets/order/money.avif" />
+                        </div>
+                        <p class="steps__label">Excepteur sint occaecat cupidatat non proident</p>
+                    </div>
+                </div>
+                <form class="form">
+                    <div class="form__row">
+                        <select class="form__select" name="system">
+                            <option value="" disabled selected>Выберите тип системы</option>
+                            <option value="1">Sed ut perspiciatis</option>
+                            <option value="2">Nemo enim ipsam</option>
+                            <option value="3">Et harum quidem</option>
+                            <option value="4">Temporibus autem</option>
+                            <option value="5">Itaque earum rerum</option>
+                        </select>
+                        <input class="form__input" type="email" name="email" placeholder="Ваш e-mail" />
+                        <input class="form__input" type="text" name="name" placeholder="Ваше имя" />
+                    </div>
+
+                    <div class="form__row form__row--between">
+                        <div class="form__slider-wrap">
+                            <div class="form__slider-label">
+                                <span class="form__slider-text">Sed ut perspiciatis, unde omnis iste natus</span>
+                                <span class="form__slider-value" id="rangeVal">75%</span>
+                            </div>
+                            <input class="form__range" type="range" name="budget" min="0" max="100" value="75" />
+                        </div>
+                        <label class="form__file">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
+                            </svg>
+                            Прикрепить файл
+                            <input type="file" name="file" style="display:none" />
+                        </label>
+                    </div>
+
+                    <div class="form__submit">
+                        <button class="btn btn--primary btn--lg" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const form = document.querySelector('.form');
+    const range = document.querySelector('.form__range');
+    const rangeVal = document.getElementById('rangeVal');
+
+    range.addEventListener('input', function () {
+        rangeVal.textContent = this.value + '%';
+        this.style.background = `linear-gradient(to right, var(--color-brand-primary) ${this.value}%, rgba(255, 255, 255, 0.7) ${this.value}%)`;
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Форма отправлена!');
+    });
+</script>
+
+</html>
