@@ -3,7 +3,8 @@
 
 .order {
     background-color: $color-dark-secondary;
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 150px;
     text-align: center;
     overflow: hidden;
     background-image: url("../assets/order/bg.webp");
@@ -16,7 +17,7 @@
 
     &__title {
         font-family: $font-base;
-        font-size: 36px;
+        font-size: 22px;
         font-weight: 800;
         letter-spacing: 0%;
         line-height: 1;
@@ -24,6 +25,18 @@
         color: $color-white;
         margin-bottom: 30px;
         word-spacing: 10px;
+
+        @include respond-to("sm") {
+            font-size: 28px;
+        }
+
+        @include respond-to("md") {
+            font-size: 32px;
+        }
+
+        @include respond-to("xl") {
+            font-size: 36px;
+        }
     }
 
     &__title-accent {

@@ -10,24 +10,15 @@
     <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Lato-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Lato-Heavy.woff2" as="font" type="font/woff2" crossorigin>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
+    <link rel="preload" href="fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload fonts -->
     <title>Trynexis</title>
+    <style>
+        :root {
+            --color-brand-primary: #3e9cdc;
+        }
+    </style>
 </head>
-
-<style>
-    :root {
-        --color-brand-primary: #3e9cdc;
-    }
-</style>
 
 <body>
     <header class="header">
@@ -140,18 +131,30 @@
                 </div>
                 <form class="form">
                     <div class="form__row">
-                        <select class="form__select" name="system">
-                            <option value="" disabled selected>Выберите тип системы</option>
-                            <option value="1">Sed ut perspiciatis</option>
-                            <option value="2">Nemo enim ipsam</option>
-                            <option value="3">Et harum quidem</option>
-                            <option value="4">Temporibus autem</option>
-                            <option value="5">Itaque earum rerum</option>
-                        </select>
+                        <div class="select form__select">
+                            <div class="select__trigger">
+                                <span class="select__value">Выберите тип системы</span>
+                                <svg class="select__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                    <path d="M1 1l5 5 5-5" stroke="#29abe2" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="select__dropdown-wrap">
+                                <ul class="select__dropdown">
+                                    <li class="select__option" data-value="1">Sed ut perspiciatis</li>
+                                    <li class="select__option" data-value="2">Nemo enim ipsam</li>
+                                    <li class="select__option" data-value="3">Et harum quidem</li>
+                                    <li class="select__option" data-value="4">Temporibus autem</li>
+                                    <li class="select__option" data-value="5">Itaque earum rerum</li>
+                                    <li class="select__option" data-value="6">Et harum quidem</li>
+                                    <li class="select__option" data-value="7">Temporibus autem</li>
+                                    <li class="select__option" data-value="8">Itaque earum rerum</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="system" value="" />
+                        </div>
                         <input class="form__input" type="email" name="email" placeholder="Ваш e-mail" />
                         <input class="form__input" type="text" name="name" placeholder="Ваше имя" />
                     </div>
-
                     <div class="form__row form__row--between">
                         <div class="form__slider-wrap">
                             <div class="form__slider-label">
@@ -161,12 +164,7 @@
                             <input class="form__range" type="range" name="budget" min="0" max="100" value="75" />
                         </div>
                         <label class="form__file">
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                <polyline points="17 8 12 3 7 8" />
-                                <line x1="12" y1="3" x2="12" y2="15" />
-                            </svg>
+                            <img src="./assets/order/fileinput.png" />
                             Прикрепить файл
                             <input type="file" name="file" style="display:none" />
                         </label>
@@ -178,22 +176,46 @@
                 </form>
             </div>
         </section>
+
     </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__copy">© 2018 «LoremIpsum.net» Все права защищены.</p>
+
+            <div class="footer__divider visible-from-xl"></div>
+
+            <div class="footer__payments">
+                <span class="footer__payment">
+                    <img src="./assets/order/qiwi.png" />
+                    <p class="footer__payment__label">Qiwi wallet</p>
+                </span>
+                <span class="footer__payment">
+                    <img src="./assets/order/wallet.png" />
+                    <p class="footer__payment__label">Yandex Money</p>
+                </span>
+                <span class=" footer__payment">
+                    <img src="./assets/order/webmoney.png" />
+                    <p class="footer__payment__label"> Web Money</p>
+
+                </span>
+            </div>
+
+            <div class="footer__divider visible-from-xl"></div>
+
+            <div class="footer__contacts">
+                <a href="mailto:info@ipsum228.com" class="footer__contact">
+                    <img src="./assets/order/mail.png" />
+                    <p class="footer__contact__label">info@ipsum228.com</p>
+
+                </a>
+                <a href="https://vk.com/index.php" target="_blank" class="footer__contact">
+                    <img src="./assets/order/vk.png" />
+                    <p class="footer__contact__label">Мы вконтакте</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
-<script>
-    const form = document.querySelector('.form');
-    const range = document.querySelector('.form__range');
-    const rangeVal = document.getElementById('rangeVal');
-
-    range.addEventListener('input', function () {
-        rangeVal.textContent = this.value + '%';
-        this.style.background = `linear-gradient(to right, var(--color-brand-primary) ${this.value}%, rgba(255, 255, 255, 0.7) ${this.value}%)`;
-    });
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Форма отправлена!');
-    });
-</script>
 
 </html>

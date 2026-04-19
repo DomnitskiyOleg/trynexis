@@ -1,0 +1,116 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.select {
+    position: relative;
+    user-select: none;
+    background: rgba($color-white, 0.85);
+    border: 1px solid $color-white;
+    border-radius: 3px;
+    color: $color-dark-secondary;
+    font-family: $font-base;
+    line-height: 1;
+
+    &__value {
+        flex: 1;
+        text-align: start;
+        white-space: nowrap;
+        color: $color-dark-secondary;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        @include respond-from("lg") {
+            font-size: 16px;
+        }
+    }
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 13px 10px;
+        color: rgba($color-white, 0.45);
+        font-family: $font-base;
+        font-size: 14px;
+        cursor: pointer;
+        transition: border-color 0.2s;
+        min-width: 0;
+    }
+
+    &__arrow {
+        transition: transform 0.2s;
+        flex-shrink: 0;
+    }
+
+    &__dropdown-wrap {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: -1px;
+        border: 1px solid #3d4050;
+        border-top: none;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding: 4px;
+        background: #292936;
+        z-index: 100;
+        display: none;
+    }
+
+    &__dropdown {
+        max-height: 180px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #3d4050;
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-brand-primary;
+            border-radius: 4px;
+        }
+    }
+
+    &__option {
+        padding: 8px 10px;
+        font-size: 18px;
+        color: $color-white;
+        cursor: pointer;
+        text-align: left;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-brand-primary;
+        }
+
+        &--active {
+            color: $color-brand-primary;
+        }
+    }
+
+    &--open {
+        background: rgba(61, 64, 80, 0.85);
+        border: 1px solid #3d4050;
+
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        .select__value {
+            color: $color-white;
+        }
+
+        .select__arrow {
+            transform: rotate(180deg);
+        }
+
+        .select__dropdown-wrap {
+            display: block;
+        }
+    }
+}
