@@ -23,7 +23,7 @@
 
     &__copy {
         font-size: 13px;
-        color: $color-gray-text;
+        color: $color-white;
 
         @include respond-from("xl") {
             order: 1;
@@ -60,7 +60,7 @@
         align-items: center;
         line-height: 1;
         gap: 6px;
-        color: $color-gray-text;
+        color: #c3c3c3;
         font-size: 13px;
 
         &__label {
@@ -117,7 +117,7 @@
         align-items: flex-end;
         gap: 10px;
         line-height: 1;
-        color: $color-gray-text;
+        color: $color-white;
         font-size: 13px;
         transition: color 0.2s;
 
