@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 34px;
+    font-family: $font-title;
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transform: translateY(0);
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+
+    &:active {
+        transform: translateY(2px);
+    }
+    &--primary {
+        background: $color-brand-primary;
+        color: $color-white;
+        border: 1px solid $color-white;
+        &:hover {
+            background: darken($color-brand-primary, 10%);
+        }
+    }
+
+    &--outline {
+        background: $color-white;
+        color: $color-black;
+        border: 1px solid #6f6d7b;
+
+        &:hover {
+            background: darken($color-white, 10%);
+        }
+    }
+
+    &--md {
+        width: 183px;
+    }
+    &--lg {
+        width: 370px;
+    }
+    &--full {
+        width: 100%;
+    }
+
+    @include respond-from("sm") {
+        width: 100%;
+    }
+}

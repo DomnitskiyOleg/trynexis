@@ -1,0 +1,116 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    position: relative;
+    height: 650px;
+    display: flex;
+    padding-top: 153px;
+    padding-bottom: 60px;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../assets/hero/bg.webp");
+    background-size: cover;
+    background-position: center;
+
+    @include respond-to("sm") {
+        padding-top: 203px;
+        padding-bottom: 203px;
+        height: 850px;
+    }
+
+    &__inner {
+        @include container;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+
+        @include respond-to("sm") {
+            max-width: 70%;
+        }
+    }
+
+    &__title {
+        font-family: $font-title;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $color-black;
+
+        @include respond-to("sm") {
+            font-size: 32px;
+        }
+
+        @include respond-to("md") {
+            font-size: 40px;
+        }
+
+        @include respond-to("xl") {
+            font-size: 48px;
+        }
+    }
+
+    &__title-accent {
+        color: $color-brand-primary;
+    }
+
+    &__lead {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        color: $color-black;
+        margin-bottom: 10px;
+
+        @include respond-to("sm") {
+            font-size: 20px;
+        }
+
+        @include respond-to("md") {
+            font-size: 22px;
+        }
+
+        @include respond-to("xl") {
+            font-size: 24px;
+        }
+    }
+
+    &__list-item {
+        font-size: 16px;
+        color: $color-black;
+        padding: 4px 0;
+
+        @include respond-to("sm") {
+            font-size: 18px;
+        }
+        @include respond-to("xl") {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: "–";
+            margin-left: 10px;
+            margin-right: 10px;
+            color: $color-black;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include respond-to("sm") {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+}

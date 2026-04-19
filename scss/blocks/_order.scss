@@ -1,0 +1,39 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.order {
+    background-color: $color-dark-secondary;
+    padding: 120px 0;
+    text-align: center;
+    overflow: hidden;
+    background-image: url("../assets/order/bg.webp");
+    background-size: cover;
+    background-position: center;
+
+    &__inner {
+        @include container;
+    }
+
+    &__title {
+        font-family: $font-base;
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: 0%;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 30px;
+        word-spacing: 10px;
+    }
+
+    &__title-accent {
+        color: $color-brand-primary;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 1;
+        color: $color-gray-text;
+        margin-bottom: 80px;
+    }
+}

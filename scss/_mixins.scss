@@ -1,0 +1,29 @@
+@mixin container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+$breakpoints: (
+    "xs": 320px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1200px,
+    "xxl": 1400px,
+);
+
+@mixin respond-to($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin respond-from($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @media (max-width: $value) {
+        @content;
+    }
+}
